@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー - 三賢会議</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Noto Sans JP', sans-serif; line-height: 1.8; color: #333; background: #fafafa; }
+.container { max-width: 800px; margin: 0 auto; padding: 40px 20px 60px; }
+h1 { font-size: 1.6em; color: #8B7FFF; margin-bottom: 4px; }
+.divider { height: 3px; background: #8B7FFF; border: none; margin-bottom: 24px; }
+.date { color: #888; font-size: 13px; margin-bottom: 24px; }
+.intro { margin-bottom: 32px; }
+.intro a { color: #8B7FFF; text-decoration: none; font-weight: 600; }
+h2 { font-size: 1.15em; color: #8B7FFF; margin: 32px 0 12px; }
+p { margin-bottom: 12px; }
+a { color: #8B7FFF; }
+footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0e0e0; text-align: center; color: #888; font-size: 13px; }
+footer a { color: #8B7FFF; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>プライバシーポリシー</h1>
+    <hr class="divider">
+    <p class="date">最終更新日: 2026年2月15日</p>
+
+    <div class="intro">
+    <p><a href="https://marumi-works.com/triad-council/terms">三賢会議</a>（以下「本アプリ」）は、marumi works（以下「当社」）が提供するiOSアプリケーションです。本プライバシーポリシーでは、本アプリにおける個人情報の取り扱いについて説明します。</p>
+    </div>
+
+    <h2>1. 収集する情報</h2>
+    <p>本アプリでは、以下の情報を取り扱います。</p>
+    <p><strong>相請テキスト：</strong>ユーザーが入力した悩み・相談内容。AI議論生成のためにサーバーに送信</p>
+<p><strong>議論履歴：</strong>過去の相談内容とAIの回答。Firestore に保存（認証済みユーザーのみアクセス可能）</p>
+<p><strong>匿名認証情報：</strong>Firebase Anonymous Authによる匿名ユーザーID</p>
+<p><strong>アプリ利用データ：</strong>Firebase Analyticsによる匿名の利用統計（アプリ起動、相諊開始・完了等）</p>
+
+
+    <h2>2. 情報の利用目的</h2>
+    <p>収集した情報は以下の目的でのみ使用します。</p>
+    <p>・AI議論の生成・表示</p>
+<p>・相談履歴の保存・閲覧</p>
+<p>・アプリの改善・エラー修正</p>
+<p>・利用制限（1日10回）の管理</p>
+
+
+    <h2>3. 第三者への情報提供</h2>
+    <p>本アプリでは、以下の第三者サービスを利用しています。</p>
+    <p><strong>OpenAI API：</strong>AI議論の生成（gpt-4o-mini）。相談テキストをサーバー経由で送信。OpenAI APIのプライバシーポリシーは
+<a href="https://openai.com/privacy/" target="_blank" rel="noopener">https://openai.com/privacy/</a> をご参照ください。</p>
+<p><strong>Firebase Authentication：</strong>匿名認証によるユーザー識別。Firebase Authenticationのプライバシーポリシーは
+<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a> をご参照ください。</p>
+<p><strong>Firebase Analytics / Crashlytics：</strong>アプリ利用状況の分析・エラー報告。Firebase Analytics / Crashlyticsのプライバシーポリシーは
+<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a> をご参照ください。</p>
+<p><strong>Google Mobile Ads：</strong>広告配信（Phase 2以降予定）。Google Mobile Adsのプライバシーポリシーは
+<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a> をご参照ください。</p>
+
+    <p>上記以外の第三者への個人情報の提供は、法令に基づく場合を除き、ユーザーの同意なく行いません。</p>
+
+    <h2>4. データの保管と削除</h2>
+    <p>サーバー: Firestore（相談履歴）。デバイス熅: Hive（ゲスト履歴キャッシュ）</p>
+    <p>アプリをアンインストールすることで、端末内に保存された全てのデータが削除されます。 クラウドに保存されたデータの削除をご希望の場合は、marumi.works@gmail.com までお問い合わせください。</p>
+
+    
+    <h2>5. 子どものプライバシー</h2>
+    <p>本アプリは13歳未満のお子さまを対象としておらず、意図的にお子さまから個人情報を収集することはありません。</p>
+
+
+    <h2>6. プライバシーポリシーの変更</h2>
+    <p>当社は、必要に応じて本ポリシーを変更することがあります。重要な変更がある場合は、アプリ内で通知します。</p>
+
+    <h2>7. お問い合わせ</h2>
+    <p>本ポリシーに関するご質問は、以下までお問い合わせください。</p>
+    <p><strong>marumi works</strong><br>メール: <a href="mailto:marumi.works@gmail.com">marumi.works@gmail.com</a></p>
+
+    <footer>
+        <p>&copy; 2026 marumi works</p>
+        <p><a href="https://marumi-works.com">トップページに戻る</a> | <a href="https://marumi-works.com/triad-council/terms">利用規約</a></p>
+    </footer>
+</div>
+</body>
+</html>
