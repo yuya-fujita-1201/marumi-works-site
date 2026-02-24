@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー - スナップレシートAI</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Noto Sans JP', sans-serif; line-height: 1.8; color: #333; background: #fafafa; }
+.container { max-width: 800px; margin: 0 auto; padding: 40px 20px 60px; }
+h1 { font-size: 1.6em; color: #0097A7; margin-bottom: 4px; }
+.divider { height: 3px; background: #0097A7; border: none; margin-bottom: 24px; }
+.date { color: #888; font-size: 13px; margin-bottom: 24px; }
+.intro { margin-bottom: 32px; }
+.intro a { color: #0097A7; text-decoration: none; font-weight: 600; }
+h2 { font-size: 1.15em; color: #0097A7; margin: 32px 0 12px; }
+p { margin-bottom: 12px; }
+a { color: #0097A7; }
+footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0e0e0; text-align: center; color: #888; font-size: 13px; }
+footer a { color: #0097A7; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>プライバシーポリシー</h1>
+    <hr class="divider">
+    <p class="date">最終更新日: 2026年2月25日</p>
+
+    <div class="intro">
+    <p><a href="https://marumi-works.com/snap-receipt-ai/terms">スナップレシートAI（SnapReceipt AI）</a>（以下「本アプリ」）は、marumi works（以下「当社」）が提供するiOSアプリケーションです。本プライバシーポリシーでは、本アプリにおける個人情報の取り扱いについて説明します。</p>
+    </div>
+
+    <h2>1. 収集する情報</h2>
+    <p>本アプリでは、以下の情報を取り扱います。</p>
+    <p><strong>レシート画像データ：</strong>カメラまたはフォトライブラリから選択したレシートの画像。OCR処理および経費仕分けのためにFirebase Cloud Functions経由でOpenAI Vision APIに送信されます。画像はFirebase Storage（ユーザーごとにアクセス権限を分離）に保存されます。</p>
+    <p><strong>経費データ：</strong>OCR解析により抽出された店舗名・日付・金額・品目・税区分・適格請求書発行事業者登録番号（読み取れた場合）などの情報。Cloud Firestoreにユーザーごとに保存されます。</p>
+    <p><strong>アカウント情報：</strong>GoogleアカウントまたはAppleアカウントによるSign-Inを通じて取得する認証情報（ユーザーID・メールアドレス等）。Firebase Authenticationで管理されます。</p>
+    <p><strong>課金情報：</strong>サブスクリプション購入に関する決済はApple（App Store）およびRevenueCat社を通じて処理されます。当社がクレジットカード番号等の決済情報を直接収集・保持することはありません。</p>
+
+    <h2>2. 情報の利用目的</h2>
+    <p>収集した情報は以下の目的でのみ使用します。</p>
+    <p>・レシート画像のOCR処理および経費科目の自動判定（AI API呼び出し）</p>
+    <p>・経費データのクラウド保存・一覧表示・集計・CSVエクスポート</p>
+    <p>・ユーザーアカウントの認証・管理</p>
+    <p>・サブスクリプション状態の管理</p>
+    <p>・アプリの品質向上（AI判定精度の改善）</p>
+
+    <h2>3. 第三者への情報提供</h2>
+    <p>本アプリでは、以下の第三者サービスを利用しています。</p>
+    <p><strong>OpenAI API：</strong>レシート画像のOCR処理および経費科目の自動判定のため、Firebase Cloud Functions経由でレシート画像を送信します。OpenAIのプライバシーポリシーは
+<a href="https://openai.com/privacy/" target="_blank" rel="noopener">https://openai.com/privacy/</a> をご参照ください。</p>
+    <p><strong>Firebase（Google LLC）：</strong>認証（Firebase Authentication）・データ保存（Cloud Firestore）・画像保存（Firebase Storage）・サーバーレス処理（Cloud Functions）のために利用しています。Googleのプライバシーポリシーは
+<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a> をご参照ください。</p>
+    <p><strong>RevenueCat：</strong>サブスクリプション管理のためにユーザーIDを共有します。RevenueCatのプライバシーポリシーは
+<a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">https://www.revenuecat.com/privacy/</a> をご参照ください。</p>
+    <p>上記以外の第三者への個人情報の提供は、法令に基づく場合を除き、ユーザーの同意なく行いません。</p>
+
+    <h2>4. データの保管と削除</h2>
+    <p>レシート画像はFirebase Storage（Googleのサーバー）に保存されます。経費データはCloud Firestore（Googleのサーバー）に保存されます。これらのデータはユーザーがアプリ内から削除操作を行うか、アカウントを削除することにより消去されます。</p>
+    <p>アカウントの削除をご希望の場合は、<a href="mailto:marumi.works@gmail.com">marumi.works@gmail.com</a> までご連絡ください。</p>
+
+    <h2>5. データのセキュリティ</h2>
+    <p>レシート画像および経費データはユーザーごとにアクセス権限が分離されており、他のユーザーがアクセスすることはできません。OpenAI APIへのリクエストはAPIキーをクライアントアプリに保持せず、Firebase Cloud Functionsを経由して安全に処理されます。</p>
+
+    <h2>6. 子どものプライバシー</h2>
+    <p>本アプリは13歳未満のお子さまを対象としておらず、意図的にお子さまから個人情報を収集することはありません。</p>
+
+    <h2>7. プライバシーポリシーの変更</h2>
+    <p>当社は、必要に応じて本ポリシーを変更することがあります。重要な変更がある場合は、アプリ内またはこのページで通知します。変更後のポリシーは、本ページに掲載した時点で効力を生じます。</p>
+
+    <h2>8. お問い合わせ</h2>
+    <p>本ポリシーに関するご質問は、以下までお問い合わせください。</p>
+    <p><strong>marumi works</strong><br>メール: <a href="mailto:marumi.works@gmail.com">marumi.works@gmail.com</a></p>
+
+    <footer>
+        <p>&copy; 2026 marumi works</p>
+        <p><a href="https://marumi-works.com">トップページに戻る</a> | <a href="https://marumi-works.com/snap-receipt-ai/terms">利用規約</a> | <a href="https://marumi-works.com/snap-receipt-ai/support">サポート</a></p>
+    </footer>
+</div>
+</body>
+</html>
