@@ -14,8 +14,15 @@ h1 { font-size: 1.6em; color: #0097A7; margin-bottom: 4px; }
 .intro { margin-bottom: 32px; }
 .intro a { color: #0097A7; text-decoration: none; font-weight: 600; }
 h2 { font-size: 1.15em; color: #0097A7; margin: 32px 0 12px; }
+h3 { font-size: 1.05em; color: #555; margin: 20px 0 8px; }
 p { margin-bottom: 12px; }
 a { color: #0097A7; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; }
+table th, table td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; font-size: 14px; }
+table th { background: #f0f0f0; font-weight: 600; }
+.highlight-box { background: #E3F2FD; border: 1px solid #90CAF9; border-radius: 8px; padding: 16px; margin: 16px 0; }
+.highlight-box p { margin-bottom: 8px; }
+.highlight-box p:last-child { margin-bottom: 0; }
 footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0e0e0; text-align: center; color: #888; font-size: 13px; }
 footer a { color: #0097A7; text-decoration: none; }
 </style>
@@ -24,46 +31,85 @@ footer a { color: #0097A7; text-decoration: none; }
 <div class="container">
     <h1>プライバシーポリシー</h1>
     <hr class="divider">
-    <p class="date">最終更新日: 2026年2月24日</p>
+    <p class="date">最終更新日: 2026年2月26日</p>
 
     <div class="intro">
-    <p><a href="https://marumi-works.com/kokoro-note/terms">こころノート（KokoroNote）</a>（以下「本アプリ」）は、marumi works（以下「当社」）が提供するiOSアプリケーションです。本プライバシーポリシーでは、本アプリにおける個人情報の取り扱いについて説明します。</p>
+    <p><a href="https://marumi-works.com/kokoro-note/terms">こころノート（KokoroNote）</a>（以下「本アプリ」）は、marumi works（以下「当社」）が提供するiOSアプリケーションです。本プライバシーポリシーでは、本アプリにおける個人情報およびユーザーデータの取り扱いについて説明します。</p>
     </div>
 
     <h2>1. 収集する情報</h2>
     <p>本アプリでは、以下の情報を取り扱います。</p>
-    <p><strong>日記・感情データ：</strong>ユーザーが入力した日記テキスト、気分スコア（0〜10）、感情タグ（不安・悲しみ・怒り・喜び・疲れ等）は、ユーザーの端末内（ローカルストレージ）にのみ保存されます。当社のサーバーには保存されません。</p>
-    <p><strong>AIへの送信データ：</strong>「AI返答を見る」機能を使用した場合、入力された日記テキストはCBT的な返答を生成するためにOpenAI APIへ送信されます。送信データはOpenAI社のポリシーに従い処理されます。送信ログはアプリ内に保持しません。このことはオンボーディング時に明示的にご案内します。</p>
-    <p><strong>課金情報：</strong>サブスクリプション購入に関する決済はApple（App Store）およびRevenueCat社を通じて処理されます。当社がクレジットカード番号等の決済情報を直接収集・保持することはありません。</p>
+
+    <h3>1-1. 端末内にのみ保存されるデータ</h3>
+    <p>以下のデータはユーザーの端末内（ローカルストレージ / SQLite）にのみ保存され、当社のサーバーには送信・保存されません。</p>
+    <table>
+        <tr><th>データの種類</th><th>内容</th></tr>
+        <tr><td>日記テキスト</td><td>ユーザーが入力した日記の本文</td></tr>
+        <tr><td>気分スコア</td><td>0〜10の数値（気分の自己評価）</td></tr>
+        <tr><td>感情タグ</td><td>不安・悲しみ・怒り・喜び・疲れなどの選択タグ</td></tr>
+        <tr><td>AI返答</td><td>AIから返却された返答テキスト</td></tr>
+        <tr><td>アプリ設定</td><td>オンボーディング完了状態、AI同意状態、AI利用回数</td></tr>
+    </table>
+
+    <h3>1-2. 第三者AIサービスに送信されるデータ</h3>
+    <div class="highlight-box">
+        <p><strong>重要：</strong>本アプリの「AI返答」機能をご利用いただく場合、以下のデータが第三者AIサービスに送信されます。この送信はユーザーが明示的に同意した場合にのみ行われます。</p>
+    </div>
+    <table>
+        <tr><th>項目</th><th>詳細</th></tr>
+        <tr><td>送信されるデータ</td><td>ユーザーが入力した<strong>日記テキスト（本文のみ）</strong>。気分スコア、感情タグ、その他の個人情報はOpenAIに送信されません。</td></tr>
+        <tr><td>送信先</td><td><strong>OpenAI, Inc.（米国）</strong>のAPIサーバー。GPT-4o-miniモデルを使用します。</td></tr>
+        <tr><td>送信の目的</td><td>認知行動療法（CBT）に基づいたAI返答を生成するためにのみ使用されます。</td></tr>
+        <tr><td>送信のタイミング</td><td>ユーザーが「保存してAI返答を受け取る」ボタンをタップした場合のみ。「AIなしで保存」を選択した場合はデータは送信されません。</td></tr>
+        <tr><td>同意の取得</td><td>初回利用時およびオンボーディング時に明示的な同意を取得します。同意は設定画面からいつでも撤回できます。</td></tr>
+        <tr><td>データの保持</td><td>当社は送信ログを保持しません。OpenAI社でのデータ取り扱いはOpenAI社のプライバシーポリシーに従います。</td></tr>
+    </table>
+
+    <h3>1-3. 課金関連データ</h3>
+    <p>サブスクリプション購入に関する決済はApple（App Store）およびRevenueCat, Inc.を通じて処理されます。当社がクレジットカード番号等の決済情報を直接収集・保持することはありません。RevenueCat社には匿名ユーザーIDのみが共有されます。</p>
 
     <h2>2. 情報の利用目的</h2>
-    <p>収集した情報は以下の目的でのみ使用します。</p>
+    <p>取り扱う情報は以下の目的でのみ使用します。</p>
     <p>・日記データのローカル保存および感情グラフ・サマリーの表示</p>
-    <p>・OpenAI APIを利用したAIコンパニオンからの返答生成</p>
+    <p>・OpenAI APIを利用したAIコンパニオンからの返答生成（ユーザーの明示的同意がある場合のみ）</p>
     <p>・サブスクリプション状態（無料・プレミアム）の管理</p>
 
     <h2>3. 第三者への情報提供</h2>
-    <p>本アプリでは、以下の第三者サービスを利用しています。</p>
-    <p><strong>OpenAI API：</strong>日記テキストに基づくCBT的な返答生成のためにテキストデータを送信します。OpenAI APIのプライバシーポリシーは
-<a href="https://openai.com/privacy/" target="_blank" rel="noopener">https://openai.com/privacy/</a> をご参照ください。</p>
-    <p><strong>RevenueCat：</strong>サブスクリプション管理のために匿名ユーザーIDを共有します。RevenueCatのプライバシーポリシーは
-<a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">https://www.revenuecat.com/privacy/</a> をご参照ください。</p>
+    <p>本アプリでは、以下の第三者サービスを利用しています。各サービスは、ユーザーデータに対して本ポリシーと同等以上の保護措置を提供しています。</p>
+
+    <h3>3-1. OpenAI, Inc.（米国）</h3>
+    <p><strong>共有するデータ：</strong>日記テキスト（本文のみ）</p>
+    <p><strong>目的：</strong>CBTに基づくAI返答の生成</p>
+    <p><strong>条件：</strong>ユーザーがAI返答機能の利用に同意し、かつ「保存してAI返答を受け取る」ボタンをタップした場合のみ</p>
+    <p><strong>プライバシーポリシー：</strong><a href="https://openai.com/privacy/" target="_blank" rel="noopener">https://openai.com/privacy/</a></p>
+
+    <h3>3-2. RevenueCat, Inc.（米国）</h3>
+    <p><strong>共有するデータ：</strong>匿名ユーザーID</p>
+    <p><strong>目的：</strong>サブスクリプション管理</p>
+    <p><strong>プライバシーポリシー：</strong><a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">https://www.revenuecat.com/privacy/</a></p>
+
     <p>上記以外の第三者への個人情報の提供は、法令に基づく場合を除き、ユーザーの同意なく行いません。</p>
 
-    <h2>4. データの保管と削除</h2>
-    <p>日記データ・感情タグ・気分スコアはすべてユーザーの端末内ローカルストレージにのみ保存されます。AI返答生成のためにOpenAIに送信された日記テキストは、送信後アプリ内に保持しません。</p>
+    <h2>4. ユーザーの同意と管理</h2>
+    <p>本アプリでは、AIサービスへのデータ送信について以下の方法でユーザーの同意を管理しています。</p>
+    <p>・<strong>オンボーディング時の同意：</strong>初回起動時に、送信されるデータの内容、送信先、利用目的を明示した上で、チェックボックスによる明示的な同意を取得します。</p>
+    <p>・<strong>AI返答利用時の同意：</strong>オンボーディングで同意しなかった場合、初回のAI返答利用時にも同意ダイアログを表示します。</p>
+    <p>・<strong>同意の撤回：</strong>設定画面の「AIデータ送信の同意」トグルにより、いつでも同意を撤回できます。撤回後はAI返答機能を利用できなくなりますが、日記の保存・閲覧は引き続きご利用いただけます。</p>
+
+    <h2>5. データの保管と削除</h2>
+    <p>日記データ・感情タグ・気分スコア・AI返答はすべてユーザーの端末内ローカルストレージにのみ保存されます。AI返答生成のためにOpenAIに送信された日記テキストは、送信後アプリ内に保持しません。</p>
     <p>設定画面の「データを削除する」機能により、端末内に保存されたすべてのデータを削除できます。また、アプリをアンインストールすることでも端末内の全データが削除されます。</p>
 
-    <h2>5. 医療目的でないことについて</h2>
+    <h2>6. 医療目的でないことについて</h2>
     <p>本アプリはメンタルヘルスの自己認識を支援するツールであり、医療診断・治療・投薬に関するサービスを提供するものではありません。本アプリのAIコンパニオンは医療従事者ではありません。深刻な精神的健康上の問題を抱えている場合は、必ず医療機関や専門家にご相談ください。</p>
 
-    <h2>6. 子どものプライバシー</h2>
+    <h2>7. 子どものプライバシー</h2>
     <p>本アプリは13歳未満のお子さまを対象としておらず、意図的にお子さまから個人情報を収集することはありません。</p>
 
-    <h2>7. プライバシーポリシーの変更</h2>
+    <h2>8. プライバシーポリシーの変更</h2>
     <p>当社は、必要に応じて本ポリシーを変更することがあります。重要な変更がある場合は、アプリ内で通知します。変更後のポリシーは本ページに掲載した時点で効力を生じます。</p>
 
-    <h2>8. お問い合わせ</h2>
+    <h2>9. お問い合わせ</h2>
     <p>本ポリシーに関するご質問は、以下までお問い合わせください。</p>
     <p><strong>marumi works</strong><br>メール: <a href="mailto:marumi.works@gmail.com">marumi.works@gmail.com</a></p>
 
