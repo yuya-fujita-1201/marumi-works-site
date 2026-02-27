@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー - ReceiptPilot</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Noto Sans JP', sans-serif; line-height: 1.8; color: #333; background: #fafafa; }
+.container { max-width: 800px; margin: 0 auto; padding: 40px 20px 60px; }
+h1 { font-size: 1.6em; color: #0097A7; margin-bottom: 4px; }
+.divider { height: 3px; background: #0097A7; border: none; margin-bottom: 24px; }
+.date { color: #888; font-size: 13px; margin-bottom: 24px; }
+.intro { margin-bottom: 32px; }
+.intro a { color: #0097A7; text-decoration: none; font-weight: 600; }
+h2 { font-size: 1.15em; color: #0097A7; margin: 32px 0 12px; }
+p { margin-bottom: 12px; }
+a { color: #0097A7; }
+footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0e0e0; text-align: center; color: #888; font-size: 13px; }
+footer a { color: #0097A7; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>プライバシーポリシー</h1>
+    <hr class="divider">
+    <p class="date">最終更新日: 2026年2月27日</p>
+
+    <div class="intro">
+    <p><a href="https://marumi-works.com/receipt-pilot/terms">ReceiptPilot（レシートパイロット）</a>（以下「本アプリ」）は、marumi works（以下「当社」）が提供するiOSアプリケーションです。本プライバシーポリシーでは、本アプリにおける個人情報の取り扱いについて説明します。</p>
+    </div>
+
+    <h2>1. 収集する情報</h2>
+    <p>本アプリでは、以下の情報を取り扱います。</p>
+    <p><strong>レシート撮影画像：</strong>カメラまたはフォトライブラリから選択したレシート・領収書の画像。OCR処理のために中継APIを経由してOpenAI Vision APIへ送信されます。解析処理後にサーバー上には保持されません。解析結果および画像はお使いの端末内（ローカルストレージ）にのみ保存されます。</p>
+    <p><strong>経費データ：</strong>レシートから抽出された事業者名・金額・日付・カテゴリ・メモ等の経費情報。お使いの端末内にのみ保存され、外部サーバーには送信されません。</p>
+    <p><strong>課金情報：</strong>Proプランのサブスクリプション購入に関する決済はApple（App Store）およびRevenueCat社を通じて処理されます。当社がクレジットカード番号等の決済情報を直接収集・保持することはありません。</p>
+
+    <h2>2. 情報の利用目的</h2>
+    <p>収集した情報は以下の目的でのみ使用します。</p>
+    <p>・レシート画像のOCR解析および経費情報の自動抽出</p>
+    <p>・経費カテゴリの自動分類と修正機能の提供</p>
+    <p>・経費一覧・月次サマリー・CSVエクスポート機能の提供</p>
+    <p>・Proサブスクリプション状態の管理</p>
+    <p>・データ重複検知（画像ハッシュを用いた同一登録の抑止）</p>
+
+    <h2>3. 第三者への情報提供</h2>
+    <p>本アプリでは、以下の第三者サービスを利用しています。</p>
+    <p><strong>OpenAI API（中継API経由）：</strong>レシート画像のOCR・分類処理のために、圧縮済みレシート画像を中継APIを経由してOpenAI Vision API（gpt-4o-mini）へ送信します。APIキーはアプリ内には保持されず、サーバー側で管理されます。OpenAIのプライバシーポリシーは
+<a href="https://openai.com/privacy/" target="_blank" rel="noopener">https://openai.com/privacy/</a> をご参照ください。</p>
+    <p><strong>RevenueCat：</strong>Proサブスクリプション管理のために匿名ユーザーIDを共有します。RevenueCatのプライバシーポリシーは
+<a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">https://www.revenuecat.com/privacy/</a> をご参照ください。</p>
+    <p>上記以外の第三者への個人情報の提供は、法令に基づく場合を除き、ユーザーの同意なく行いません。</p>
+
+    <h2>4. データの保管と削除</h2>
+    <p>経費データおよびレシート画像はお使いの端末内（ローカルストレージ）にのみ保存されます。クラウドへの常時同期は行われません。</p>
+    <p>アプリの設定画面から、データの保存期間（30日・90日・180日・無期限）を選択できます。設定した期間が経過したデータは自動的に削除されます。</p>
+    <p>「全データ削除」機能により、保存されたすべての経費データおよび画像を即時に完全削除できます。</p>
+    <p>アプリをアンインストールすることで、端末内に保存された全てのデータが削除されます。</p>
+    <p>OCR処理のためにサーバーへ送信されたレシート画像は、解析処理後にサーバー上では保持されません。</p>
+
+    <h2>5. セキュリティ</h2>
+    <p>本アプリはOpenAI APIキーをアプリ内に保持しません。レシート画像の送信は中継APIを経由し、サーバー側でAPIキー管理・レート制御・監査ログ・応答スキーマ検証を行っています。</p>
+    <p>初回起動時に、OCR送信範囲・保存範囲・削除方法について同意確認を行います。</p>
+
+    <h2>6. 子どものプライバシー</h2>
+    <p>本アプリは13歳未満のお子さまを対象としておらず、意図的にお子さまから個人情報を収集することはありません。</p>
+
+    <h2>7. プライバシーポリシーの変更</h2>
+    <p>当社は、必要に応じて本ポリシーを変更することがあります。重要な変更がある場合は、アプリ内で通知します。変更後のポリシーは本ページに掲載した時点で効力を生じます。</p>
+
+    <h2>8. お問い合わせ</h2>
+    <p>本ポリシーに関するご質問は、以下までお問い合わせください。</p>
+    <p><strong>marumi works</strong><br>メール: <a href="mailto:marumi.works@gmail.com">marumi.works@gmail.com</a></p>
+
+    <footer>
+        <p>&copy; 2026 marumi works</p>
+        <p><a href="https://marumi-works.com">トップページに戻る</a> | <a href="https://marumi-works.com/receipt-pilot/terms">利用規約</a> | <a href="https://marumi-works.com/receipt-pilot/support">サポート</a></p>
+    </footer>
+</div>
+</body>
+</html>
