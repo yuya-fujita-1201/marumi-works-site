@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Claude Goal — 配布ページ</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Noto Sans JP', sans-serif; background: #fafafa; color: #333; }
+.container { max-width: 720px; margin: 0 auto; padding: 60px 20px; }
+.header { text-align: center; margin-bottom: 40px; }
+.header h1 { font-size: 1.8em; color: #222; margin-bottom: 6px; }
+.header .tag { display: inline-block; font-size: 11px; color: #fff; background: #6c5ce7; padding: 2px 8px; border-radius: 10px; margin-bottom: 8px; letter-spacing: 0.5px; }
+.header p { color: #888; font-size: 14px; line-height: 1.6; }
+.card { background: #fff; border-radius: 12px; padding: 28px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+.card h2 { font-size: 1.1em; color: #222; margin-bottom: 12px; }
+.card p { color: #666; font-size: 14px; line-height: 1.7; margin-bottom: 12px; }
+.lock-row { display: flex; gap: 8px; margin-top: 16px; }
+.lock-row input[type="password"] { flex: 1; padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; outline: none; }
+.lock-row input[type="password"]:focus { border-color: #6c5ce7; }
+.btn { padding: 10px 18px; border: none; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; background: #6c5ce7; color: #fff; transition: background 0.15s; }
+.btn:hover { background: #574fd6; }
+.btn:disabled { background: #ccc; cursor: not-allowed; }
+.error { color: #d33; font-size: 13px; margin-top: 10px; min-height: 18px; }
+.hidden { display: none !important; }
+.dl-section { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+.dl-card { border: 1px solid #eee; border-radius: 10px; padding: 20px; text-align: center; }
+.dl-card h3 { font-size: 1em; color: #222; margin-bottom: 4px; }
+.dl-card .ver { color: #999; font-size: 12px; margin-bottom: 14px; }
+.dl-btn { display: inline-block; padding: 10px 18px; border-radius: 8px; background: #222; color: #fff; text-decoration: none; font-size: 13px; font-weight: 500; transition: background 0.15s; }
+.dl-btn:hover { background: #444; }
+.dl-card select { display: block; width: 100%; padding: 8px 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px; margin-bottom: 12px; background: #fff; }
+.note { font-size: 12px; color: #888; line-height: 1.7; margin-top: 24px; padding: 16px; background: #f5f5f7; border-radius: 8px; }
+footer { text-align: center; margin-top: 40px; color: #aaa; font-size: 13px; }
+footer a { color: #888; text-decoration: none; }
+@media (max-width: 540px) {
+  .dl-section { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <span class="tag">PRIVATE</span>
+        <h1>Claude Goal</h1>
+        <p>長時間自走するゴール達成エージェントのデスクトップ版<br>
+           Mac / Windows 向け Electron アプリ</p>
+    </div>
+
+    <div id="lock" class="card">
+        <h2>配布ページにアクセス</h2>
+        <p>このページは限定配布用です。共有されたパスワードを入力してください。</p>
+        <div class="lock-row">
+            <input id="pw" type="password" placeholder="パスワード" autocomplete="off">
+            <button id="unlock" class="btn">解放</button>
+        </div>
+        <div id="err" class="error"></div>
+    </div>
+
+    <div id="downloads" class="card hidden">
+        <h2>ダウンロード（v0.1.0）</h2>
+        <p>お使いの OS に合わせて選択してください。リンクの有効期限はありませんが、URL は外部に共有しないでください。</p>
+        <div class="dl-section">
+            <div class="dl-card">
+                <h3>macOS</h3>
+                <div class="ver">v0.1.0 / .dmg</div>
+                <select id="mac-arch">
+                    <option value="mac-arm64">Apple Silicon (M1 以降)</option>
+                    <option value="mac-x64">Intel Mac</option>
+                </select>
+                <a id="mac-dl" class="dl-btn" href="#">ダウンロード</a>
+            </div>
+            <div class="dl-card">
+                <h3>Windows</h3>
+                <div class="ver">v0.1.0 / .exe (Universal)</div>
+                <select id="win-arch">
+                    <option value="win-universal">Universal (推奨)</option>
+                    <option value="win-x64">x64 のみ</option>
+                    <option value="win-arm64">ARM64 のみ</option>
+                </select>
+                <a id="win-dl" class="dl-btn" href="#">ダウンロード</a>
+            </div>
+        </div>
+        <div class="note">
+            <strong>初回起動時の注意：</strong><br>
+            ・macOS では「開発元が未確認」と表示されます。Finder で右クリック →「開く」で起動してください。<br>
+            ・Windows では SmartScreen の警告が出ます。「詳細情報」→「実行」で起動できます。<br>
+            ・本アプリは <code>ANTHROPIC_API_KEY</code> 環境変数 または アプリ内設定で API キーが必要です。
+        </div>
+    </div>
+
+    <footer>
+        <a href="/">marumi works</a>
+    </footer>
+</div>
+
+<script>
+const PAYLOAD = {
+  "v": 1,
+  "alg": "AES-GCM",
+  "kdf": { "name": "PBKDF2", "hash": "SHA-256", "iterations": 200000 },
+  "saltHex": "c368fc82bcf453d1f1b4a6758134a0b4",
+  "ivHex": "94b6c568ddd51ea76fcf1a97",
+  "ciphertextB64": "Eq6lU6LBaqfC7JGzVRO1sxs/CbRnAUWbMGqJ6ZYpuFNTjF5YryJfWNb/XrDKuAatg6UuCFsMTYXR04orM73uri58xiouhL94ksidwZ60ekVkJxNDGqmUSiRNFDtIXZpcXS0eym0rsSyIZ6B8yC0kdEf2Rno8hs94+LlEHZQQKg0BmEoIe4cQm7LmOCv5TK5D2DyR9Yrs4hrDlLRQIQU9YlCCWfSPNgIyBdE+njpCAJaz+YrEDofeHRYZlJ3uz+zIi1KdTFSfM37E6PscT8SbnlURK0f8AORbRz1erkPOPLBKJ8oomU2VTFPzofnR22blaZG8TO55ZeLUGZ1YMdgZY91W4Irhr1Mg8CZInnSJj1ZrXr0f+hc1rH7GtSzN4kxnHmvfl/FHvoOJ7Yl21bPMyHkN9nxE4yA+20Rp9wc8trWfiSedSzZpfijcPvHWFPKqo95NBlU1Z58Edaz3Ziirsh8M1migwv2r5QdRFp+7ip9NjH8+5G9MYR45G6yljMCpd01tQdGUU48YZIsTSujFiCltlz8Wi9HTOfFg6tnJLPMA5fqzUEaZyDPTwPLoY/Ve1YlBHnB2mARm4qGnteVsXqms1u/Tn9fOf3+dTyBvuCWMhhxC8MmzoveQfEr7OWVNHzT9A/OVa2spL04HwLg3ygMG82i27LVu8zTILJDHdaX0VdsGAACohhUW0tE1QFU/u07rIugusBgHTZEEWzE2EwO0psORM0fT8sUsRSu00DWQi+tWTsDZersmF/TWdpf361kXVgWx6s/VCNF4cRud7DDaQM4D7cxGDiCJCeTd/QKOzuEqkRk1s7n3fIaHB3wJb3jXm/XXT9UCABJUHoL3JfBfeYrN879RUBXGH6P2HATWv7G2WiytMX3dZDZKnnpG4EQp7WYXs/65Ud2547jN0oeYyE/dGufjwS8FWQkwmNuBsFufEq6AU66vtwQlhhn/8aI="
+};
+
+function hexToBytes(hex) {
+  const a = new Uint8Array(hex.length / 2);
+  for (let i = 0; i < a.length; i++) a[i] = parseInt(hex.substr(i*2, 2), 16);
+  return a;
+}
+function b64ToBytes(b64) {
+  const bin = atob(b64);
+  const a = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) a[i] = bin.charCodeAt(i);
+  return a;
+}
+
+let URLS = null;
+
+async function tryUnlock(password) {
+  const enc = new TextEncoder();
+  const km = await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']);
+  const key = await crypto.subtle.deriveKey(
+    { name: 'PBKDF2', salt: hexToBytes(PAYLOAD.saltHex), iterations: PAYLOAD.kdf.iterations, hash: PAYLOAD.kdf.hash },
+    km,
+    { name: 'AES-GCM', length: 256 },
+    false,
+    ['decrypt']
+  );
+  const plain = await crypto.subtle.decrypt(
+    { name: 'AES-GCM', iv: hexToBytes(PAYLOAD.ivHex) },
+    key,
+    b64ToBytes(PAYLOAD.ciphertextB64)
+  );
+  return JSON.parse(new TextDecoder().decode(plain));
+}
+
+function applyArch(selectId, btnId) {
+  const sel = document.getElementById(selectId);
+  const btn = document.getElementById(btnId);
+  const update = () => { btn.href = URLS[sel.value]; };
+  sel.addEventListener('change', update);
+  update();
+}
+
+document.getElementById('unlock').addEventListener('click', async () => {
+  const pw = document.getElementById('pw').value;
+  const errEl = document.getElementById('err');
+  errEl.textContent = '';
+  if (!pw) { errEl.textContent = 'パスワードを入力してください'; return; }
+  try {
+    URLS = await tryUnlock(pw);
+    document.getElementById('lock').classList.add('hidden');
+    document.getElementById('downloads').classList.remove('hidden');
+    applyArch('mac-arch', 'mac-dl');
+    applyArch('win-arch', 'win-dl');
+  } catch (e) {
+    errEl.textContent = 'パスワードが正しくありません';
+  }
+});
+
+document.getElementById('pw').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') document.getElementById('unlock').click();
+});
+</script>
+</body>
+</html>
