@@ -59,12 +59,12 @@ footer a { color: #888; text-decoration: none; }
     </div>
 
     <div id="downloads" class="card hidden">
-        <h2>ダウンロード（v0.1.0）</h2>
+        <h2>ダウンロード（v0.2.0）</h2>
         <p>お使いの OS に合わせて選択してください。リンクの有効期限はありませんが、URL は外部に共有しないでください。</p>
         <div class="dl-section">
             <div class="dl-card">
                 <h3>macOS</h3>
-                <div class="ver">v0.1.0 / .dmg</div>
+                <div class="ver">v0.2.0 / .dmg</div>
                 <select id="mac-arch">
                     <option value="mac-arm64">Apple Silicon (M1 以降)</option>
                     <option value="mac-x64">Intel Mac</option>
@@ -73,7 +73,7 @@ footer a { color: #888; text-decoration: none; }
             </div>
             <div class="dl-card">
                 <h3>Windows</h3>
-                <div class="ver">v0.1.0 / .exe (Universal)</div>
+                <div class="ver">v0.2.0 / .exe (Universal)</div>
                 <select id="win-arch">
                     <option value="win-universal">Universal (推奨)</option>
                     <option value="win-x64">x64 のみ</option>
@@ -102,7 +102,7 @@ const PAYLOAD = {
   "kdf": { "name": "PBKDF2", "hash": "SHA-256", "iterations": 200000 },
   "saltHex": "c368fc82bcf453d1f1b4a6758134a0b4",
   "ivHex": "94b6c568ddd51ea76fcf1a97",
-  "ciphertextB64": "Eq6lU6LBaqfC7JGzVRO1sxs/CbRnAUWbMGqJ6ZYpuFNTjF5YryJfWNb/XrDKuAatg6UuCFsMTYXR04orM73uri58xiouhL94ksidwZ60ekVkJxNDGqmUSiRNFDtIXZpcXS0eym0rsSyIZ6B8yC0kdEf2Rno8hs94+LlEHZQQKg0BmEoIe4cQm7LmOCv5TK5D2DyR9Yrs4hrDlLRQIQU9YlCCWfSPNgIyBdE+njpCAJaz+YrEDofeHRYZlJ3uz+zIi1KdTFSfM37E6PscT8SbnlURK0f8AORbRz1erkPOPLBKJ8oomU2VTFPzofnR22blaZG8TO55ZeLUGZ1YMdgZY91W4Irhr1Mg8CZInnSJj1ZrXr0f+hc1rH7GtSzN4kxnHmvfl/FHvoOJ7Yl21bPMyHkN9nxE4yA+20Rp9wc8trWfiSedSzZpfijcPvHWFPKqo95NBlU1Z58Edaz3Ziirsh8M1migwv2r5QdRFp+7ip9NjH8+5G9MYR45G6yljMCpd01tQdGUU48YZIsTSujFiCltlz8Wi9HTOfFg6tnJLPMA5fqzUEaZyDPTwPLoY/Ve1YlBHnB2mARm4qGnteVsXqms1u/Tn9fOf3+dTyBvuCWMhhxC8MmzoveQfEr7OWVNHzT9A/OVa2spL04HwLg3ygMG82i27LVu8zTILJDHdaX0VdsGAACohhUW0tE1QFU/u07rIugusBgHTZEEWzE2EwO0psORM0fT8sUsRSu00DWQi+tWTsDZersmF/TWdpf361kXVgWx6s/VCNF4cRud7DDaQM4D7cxGDiCJCeTd/QKOzuEqkRk1s7n3fIaHB3wJb3jXm/XXT9UCABJUHoL3JfBfeYrN879RUBXGH6P2HATWv7G2WiytMX3dZDZKnnpG4EQp7WYXs/65Ud2547jN0oeYyE/dGufjwS8FWQkwmNuBsFufEq6AU66vtwQlhhn/8aI="
+  "ciphertextB64": "Eq6lU6LBaqfC7JGzVRO1sxs/CbRnAUWbMGqJ6ZYpuFNTjF5YryJfWNb/XrDKuAatg6UuCFsMTYXR04orM73uri58xiouhL94ksidwZ60ekVkJxNDGqmUSidNFDtIXZpcXS0eym0rsSyIZ6N8yC0kdEf2Rno8hs94/OgVH5YeLQ0GzksAdo0dm7LmOCv5TK5D2DyR9Yrs4hrDlLRQIQU9YlCCWfSPNgIyBdE+njpCAJaz+YrEDofeHRYZlJ3uz+zIi1KdTFSfM37E6PscT8SbnlURK0f8AORbRz1erkPOPLBKJ8ormU2VTFPzofnR22blaZG8TO56ZeLUGZ1YMdgZY90D4423/Fcn+X0SxXTZhgc/Xr0f+hc1rH7GtSzZ/kgnTzuW1PUR8NGSo9IpweCXj2sGrHde7CEkwVAnoxQwvfGNnWDFDWd1YHmAbqvRHb64qNoMTF49eMZPbrrvLDu9uwlCwWKkg/Wr8w0SD87xlMdNjS58tTVLaFIrEKjkxp/mKk5tQpTTDY8Of4gIC6uZznQngW9OkoOFb6dh743MZqEdtemrS1Pew2bO1OroLr5YjIUHWWhjlQt74rmh7eQgVq33x+/I0JnHZzqNTjgjpHHJ3VpV/YX39KKMNEb2ND1NE2ruQ+CcKmohL19bnbk02AwZ+Xr9p6wps2mJfduLb/SvA5AbSAyli01Cmc18Hxkk/xDoaPAqsAoPFN5OWDUvQVHuo8HEaBefo4ssAmGlkXKb3vsaC5TLYaZqGqSBYsuhpQsMGF7u/pyOT8NzKxCH4zHAWtpNud9KBWSbHaOFu1OS0LB2wUMyuvXld4LGTXcBcCGcgOPPBcYUCQQaCYjzZPhfb4CO6u4bTk3GHvK0TV7Rtv2kUSjseyKSOTVKnT8BvkQr6mFMt/6nBoW5sL7KgtWQyBmITLblmCNTUgkwmNuBsOttB4t6Z7aW4QTPECVX0bw="
 };
 
 function hexToBytes(hex) {
