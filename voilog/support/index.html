@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サポート - VoiLog</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Noto Sans JP', sans-serif; line-height: 1.8; color: #333; background: #fafafa; }
+.container { max-width: 800px; margin: 0 auto; padding: 40px 20px 60px; }
+h1 { font-size: 1.6em; color: #1e88e5; margin-bottom: 4px; }
+.divider { height: 3px; background: #1e88e5; border: none; margin-bottom: 24px; }
+.date { color: #888; font-size: 13px; margin-bottom: 24px; }
+.intro { margin-bottom: 32px; }
+.intro a { color: #1e88e5; text-decoration: none; font-weight: 600; }
+h2 { font-size: 1.15em; color: #1e88e5; margin: 32px 0 12px; }
+p { margin-bottom: 12px; }
+a { color: #1e88e5; }
+.faq-item { background: #fff; border-radius: 8px; padding: 20px 24px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.faq-item h3 { font-size: 1em; color: #222; margin-bottom: 8px; }
+.faq-item p { color: #555; margin-bottom: 0; }
+.contact-box { background: #fff; border-radius: 12px; padding: 28px; margin-top: 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border-left: 4px solid #1e88e5; }
+.contact-box p { margin-bottom: 8px; }
+footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0e0e0; text-align: center; color: #888; font-size: 13px; }
+footer a { color: #1e88e5; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>サポート</h1>
+    <hr class="divider">
+
+    <div class="intro">
+    <p><a href="https://marumi-works.com/voilog/privacy">VoiLog（ボイログ）</a> をご利用いただきありがとうございます。アプリに関するご質問やお困りごとがございましたら、以下をご確認ください。</p>
+    </div>
+
+    <h2>はじめての方へ</h2>
+
+    <div class="faq-item">
+        <h3>Q. 3 つの録音モードの違いを教えてください</h3>
+        <p><strong>マイク録音</strong>は iPhone のマイクから録音して、iOS 標準の音声認識でリアルタイムに文字起こしします。料金はかかりません。1 人の音声メモや近距離の会話に最適です。<br>
+        <strong>会議モード</strong>は OpenAI の高精度な音声認識エンジン（Whisper 系）を使用します。離れた声や複数人での会議に向いていますが、文字の表示まで 30 秒ほど遅延します。利用には OpenAI API キーと利用料金（約 27 円／時間）が必要です。<br>
+        <strong>画面音声録音</strong>は Zoom / Teams / Meet 等のオンライン会議の音声をマイク音声と同時に記録し、会議モードと同じく Whisper 系で文字起こしします。</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Q. OpenAI API キーはどこで取得できますか？</h3>
+        <p>OpenAI のサイト（<a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">https://platform.openai.com/api-keys</a>）からアカウント作成 → 支払い方法登録 → API キーを発行という流れで取得できます。詳しい手順はアプリ内「設定 → API キーの取得方法」でもご確認いただけます。</p>
+    </div>
+
+    <h2>よくある質問</h2>
+
+    <div class="faq-item">
+        <h3>Q. マイク録音モードで文字が表示されません</h3>
+        <p>マイク録音モードはインターネット接続が必要です。Wi-Fi またはモバイルデータ通信の接続状態をご確認ください。また、初回利用時に表示される「マイクへのアクセス」「音声認識へのアクセス」を許可していただく必要があります。iOS の「設定 → VoiLog」から許可状態をご確認ください。</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Q. 会議モードで「API キーが無効」と表示されます</h3>
+        <p>OpenAI API キーが正しくない、もしくは OpenAI 側で支払い情報の登録（チャージ）が完了していない可能性があります。アプリの設定画面で「接続テスト」を実行してご確認ください。また、OpenAI のダッシュボード（<a href="https://platform.openai.com/settings/organization/billing/overview" target="_blank" rel="noopener">Billing ページ</a>）で残高をご確認ください。</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Q. 画面音声録音モードで相手の声が録音されません</h3>
+        <p>画面音声録音モードは iOS の「画面収録」機能を利用しています。録音画面で「ブロードキャストを開始」をタップし、表示されるピッカーで「VoiLog 録音」を選択し、マイクスイッチをオンにしてから「ブロードキャストを開始」をタップしてください。コントロールセンターの画面収録ボタンからではなく、必ずアプリ内のボタンから起動してください。</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Q. 文字起こしの結果は安全ですか？どこに保存されますか？</h3>
+        <p>録音した音声ファイルと文字起こしテキストは、お使いの iPhone 内のローカルストレージにのみ保存されます。当社のサーバーには一切送信・保存されません。ただし、文字起こし処理のために、ユーザーが選択したモードに応じて Apple または OpenAI のサーバーに音声データが送信されます。詳しくは<a href="https://marumi-works.com/voilog/privacy">プライバシーポリシー</a>をご参照ください。</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Q. OpenAI API の料金はどのくらいかかりますか？</h3>
+        <p>本アプリが使用する gpt-4o-mini-transcribe モデルは、1 時間の音声で約 27 円程度の料金です（2026 年 5 月時点）。1 時間の会議を文字起こししても 30 円弱というイメージです。最新の料金は OpenAI の料金表（<a href="https://openai.com/api/pricing/" target="_blank" rel="noopener">https://openai.com/api/pricing/</a>）でご確認ください。</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Q. API キーを削除したい・別のキーに切り替えたい</h3>
+        <p>アプリの「設定」画面で、保存済みキーの右側にある「削除」をタップするとキーチェーンから完全に削除されます。新しいキーを貼り付けて「保存」すれば差し替えられます。</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Q. 録音履歴を削除するには？</h3>
+        <p>録音一覧画面で「編集」をタップし、削除したい録音を選んでください。アプリをアンインストールすると、すべての録音データ・文字起こし・保存された API キーが端末から削除されます。</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Q. 対応機種を教えてください</h3>
+        <p>iOS 16 以降を搭載した iPhone でご利用いただけます。</p>
+    </div>
+
+    <h2>お問い合わせ</h2>
+
+    <div class="contact-box">
+        <p>上記で解決しない場合は、お気軽にメールでお問い合わせください。</p>
+        <p><strong>まるみワークス（Marumi Works）</strong></p>
+        <p>メール: <a href="mailto:marumiworks@gmail.com">marumiworks@gmail.com</a></p>
+        <p>通常 2 営業日以内にご返信いたします。</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 まるみワークス（Marumi Works）</p>
+        <p><a href="https://marumi-works.com">トップページに戻る</a> | <a href="https://marumi-works.com/voilog/privacy">プライバシーポリシー</a> | <a href="https://marumi-works.com/voilog/terms">利用規約</a></p>
+    </footer>
+</div>
+</body>
+</html>
