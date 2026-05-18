@@ -1,198 +1,195 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>marumi works</title>
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Noto Sans JP', sans-serif; background: #fafafa; color: #333; }
-.container { max-width: 720px; margin: 0 auto; padding: 60px 20px; }
-.header { text-align: center; margin-bottom: 48px; }
-.header h1 { font-size: 1.8em; color: #222; margin-bottom: 4px; }
-.header p { color: #888; font-size: 14px; }
-.app-card { background: #fff; border-radius: 12px; overflow: hidden; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); transition: box-shadow 0.2s; }
-.app-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
-.app-color { height: 4px; }
-.app-info { padding: 24px 28px; }
-.app-info h2 { font-size: 1.2em; margin-bottom: 6px; color: #222; }
-.app-desc { color: #666; font-size: 14px; margin-bottom: 16px; line-height: 1.6; }
-.app-links { display: flex; gap: 20px; }
-.app-links a { font-size: 14px; text-decoration: none; font-weight: 500; }
-.app-links a:hover { text-decoration: underline; }
-footer { text-align: center; margin-top: 48px; color: #aaa; font-size: 13px; }
-footer a { color: #888; text-decoration: none; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Marumi Works は、iOSアプリ、デスクトップアプリ、AI活用ツールを企画・開発する個人開発スタジオです。">
+  <title>Marumi Works | Apps and AI Tools</title>
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <h1>marumi works</h1>
-        <p>アプリ開発</p>
-    </div>
-    
-        <div class="app-card">
-            <div class="app-color" style="background: #1e88e5;"></div>
-            <div class="app-info">
-                <h2>VoiLog</h2>
-                <p class="app-desc">会議もメモも、すぐ文字に。マイク・対面会議・オンライン会議に対応した音声録音＆文字起こしアプリ</p>
-                <div class="app-links">
-                    <a href="https://marumi-works.com/voilog/privacy" style="color: #1e88e5;">プライバシーポリシー</a>
-                    <a href="https://marumi-works.com/voilog/terms" style="color: #1e88e5;">利用規約</a>
-                    <a href="https://marumi-works.com/voilog/support" style="color: #1e88e5;">サポート</a>
-                </div>
+  <div class="site-page">
+    <header class="site-header">
+      <div class="site-container site-header__inner">
+        <a class="site-brand" href="./" aria-label="Marumi Works ホーム">
+          <span class="site-brand__mark">MW</span>
+          <span class="site-brand__text">
+            <span class="site-brand__name">Marumi Works</span>
+            <span class="site-brand__tagline">Apps / AI Tools / Workflow</span>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#apps">Apps</a>
+          <a href="#works">Works</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="site-container hero__grid">
+          <div>
+            <p class="eyebrow">Independent product studio</p>
+            <h1>日々の判断と作業を軽くする、アプリとAIツールをつくる。</h1>
+            <p class="hero__lead">
+              Marumi Works は、個人開発のスピードを活かして、iOSアプリ、デスクトップツール、
+              AIを使った業務支援プロダクトを企画・開発しています。
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="#apps">注目アプリを見る</a>
+              <a class="button button--secondary" href="mailto:marumi.works@gmail.com">相談する</a>
             </div>
-        </div>
+          </div>
 
-        <div class="app-card">
-            <div class="app-color" style="background: #0097A7;"></div>
-            <div class="app-info">
-                <h2>SnapEnglish AI</h2>
-                <p class="app-desc">カメラで撮影するとAIが英語フレーズを3つ生成する英語学習アプリ</p>
-                <div class="app-links">
-                    <a href="https://marumi-works.com/snapenglish/privacy" style="color: #0097A7;">プライバシーポリシー</a>
-                    <a href="https://marumi-works.com/snapenglish/terms" style="color: #0097A7;">利用規約</a>
-                    <a href="https://marumi-works.com/snapenglish/support" style="color: #0097A7;">サポート</a>
-                </div>
+          <aside class="hero-panel" aria-label="Marumi Works の開発領域">
+            <div class="hero-panel__top">
+              <p class="hero-panel__title">Current focus</p>
+              <span class="hero-panel__status">Preparing services</span>
             </div>
+            <ul class="hero-panel__list">
+              <li>
+                <span class="hero-panel__label">iOS Apps</span>
+                <span class="hero-panel__meta">Life / Learning / Utility</span>
+              </li>
+              <li>
+                <span class="hero-panel__label">Desktop Tools</span>
+                <span class="hero-panel__meta">Productivity / Automation</span>
+              </li>
+              <li>
+                <span class="hero-panel__label">AI Workflow</span>
+                <span class="hero-panel__meta">Prototype / Operations</span>
+              </li>
+            </ul>
+          </aside>
         </div>
+      </section>
 
-        <div class="app-card">
-            <div class="app-color" style="background: #87CEEB;"></div>
-            <div class="app-info">
-                <h2>はじめてメモ ~First Steps~</h2>
-                <p class="app-desc">お子さまの「はじめて」の瞬間を記録・共有できるマイルストーン記録アプリ</p>
-                <div class="app-links">
-                    <a href="https://marumi-works.com/firststeps/privacy" style="color: #87CEEB;">プライバシーポリシー</a>
-                    <a href="https://marumi-works.com/firststeps/terms" style="color: #87CEEB;">利用規約</a>
+      <section class="section section--surface" id="works">
+        <div class="site-container">
+          <div class="section-header">
+            <h2>小さく試し、使える形まで磨く。</h2>
+            <p>
+              生活の中で何度も使うアプリから、AIを前提にした開発・業務支援まで、
+              企画、実装、配布ページ、運用導線を一体で整えていきます。
+            </p>
+          </div>
+          <div class="area-grid">
+            <article class="area-card">
+              <h3>iOSアプリ開発</h3>
+              <p>記録、学習、生活支援など、毎日使える小さなユーティリティを継続的に開発しています。</p>
+            </article>
+            <article class="area-card">
+              <h3>デスクトップアプリ</h3>
+              <p>PC作業の流れを止めないための、軽量で実用的なツールづくりに取り組んでいます。</p>
+            </article>
+            <article class="area-card">
+              <h3>AIツール開発</h3>
+              <p>生成AIを活用した試作、文章・画像・業務フロー支援の仕組み化を進めています。</p>
+            </article>
+            <article class="area-card">
+              <h3>業務受付準備</h3>
+              <p>将来的な受託相談に向けて、実績、提供範囲、問い合わせ導線を整備しています。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="apps">
+        <div class="site-container">
+          <div class="section-header">
+            <h2>Featured Apps</h2>
+            <p>
+              先行して紹介ページを整備していく予定のプロダクトです。
+              販売ページや専用サイトは、準備ができたものから順次接続します。
+            </p>
+          </div>
+          <div class="app-grid">
+            <article class="app-card">
+              <div class="app-card__accent"></div>
+              <div class="app-card__body">
+                <div class="app-card__meta">
+                  <span class="badge badge--soon">準備中</span>
+                  <span class="badge">iOS App</span>
                 </div>
-            </div>
-        </div>
-
-        <div class="app-card">
-            <div class="app-color" style="background: #E91E8C;"></div>
-            <div class="app-info">
-                <h2>推し活プランナー</h2>
-                <p class="app-desc">推しの管理、イベントカレンダー、推し活家計簿、思い出メモを1アプリで。完全オフライン動作</p>
-                <div class="app-links">
-                    <a href="https://marumi-works.com/oshi-planner/privacy" style="color: #E91E8C;">プライバシーポリシー</a>
-                    <a href="https://marumi-works.com/oshi-planner/terms" style="color: #E91E8C;">利用規約</a>
-                    <a href="https://marumi-works.com/oshi-planner/support" style="color: #E91E8C;">サポート</a>
+                <h3>PulseEat</h3>
+                <p>食事や体調の記録をもとに、日々のコンディション管理を支えるアプリとして準備中です。</p>
+                <div class="app-card__links">
+                  <a class="text-link" href="apps/pulseeat/">紹介ページ</a>
                 </div>
-            </div>
-        </div>
+              </div>
+            </article>
 
-        <div class="app-card">
-            <div class="app-color" style="background: #8B7FFF;"></div>
-            <div class="app-info">
-                <h2>三賢会議</h2>
-                <p class="app-desc">3つのAI人格（論理・感情・閃き）があなたの悩みを多角的に議論する意思決定サポートアプリ</p>
-                <div class="app-links">
-                    <a href="https://marumi-works.com/triad-council/privacy" style="color: #8B7FFF;">プライバシーポリシー</a>
-                    <a href="https://marumi-works.com/triad-council/terms" style="color: #8B7FFF;">利用規約</a>
-                    <a href="https://marumi-works.com/triad-council/support" style="color: #8B7FFF;">サポート</a>
+            <article class="app-card">
+              <div class="app-card__accent app-card__accent--coral"></div>
+              <div class="app-card__body">
+                <div class="app-card__meta">
+                  <span class="badge badge--live">配布ページあり</span>
+                  <span class="badge">Desktop Tool</span>
                 </div>
-            </div>
-        </div>
-
-        <div class="app-card">
-            <div class="app-color" style="background: #26A69A;"></div>
-            <div class="app-info">
-                <h2>こころノート</h2>
-                <p class="app-desc">AI×認知行動療法で感情を記録・分析。日記を書くだけでAIがやさしく寄り添う感情ケアアプリ</p>
-                <div class="app-links">
-                    <a href="https://marumi-works.com/kokoro-note/privacy" style="color: #26A69A;">プライバシーポリシー</a>
-                    <a href="https://marumi-works.com/kokoro-note/terms" style="color: #26A69A;">利用規約</a>
-                    <a href="https://marumi-works.com/kokoro-note/support" style="color: #26A69A;">サポート</a>
+                <h3>Claude Goal</h3>
+                <p>長時間タスクをゴール単位で進めるための、開発・検証支援ツールです。</p>
+                <div class="app-card__links">
+                  <a class="text-link" href="apps/claude-goal/">紹介ページ</a>
                 </div>
-            </div>
-        </div>
+              </div>
+            </article>
 
-        <div class="app-card">
-            <div class="app-color" style="background: #FF7043;"></div>
-            <div class="app-info">
-                <h2>スマートタイマー</h2>
-                <p class="app-desc">カスタマイズ可能なタイマーで集中スタイルに合わせる。シンプルで使いやすいタイマーアプリ</p>
-                <div class="app-links">
-                    <a href="https://marumi-works.com/smart-timer/privacy" style="color: #FF7043;">プライバシーポリシー</a>
-                    <a href="https://marumi-works.com/smart-timer/terms" style="color: #FF7043;">利用規約</a>
-                    <a href="https://marumi-works.com/smart-timer/support" style="color: #FF7043;">サポート</a>
+            <article class="app-card">
+              <div class="app-card__accent app-card__accent--blue"></div>
+              <div class="app-card__body">
+                <div class="app-card__meta">
+                  <span class="badge badge--soon">準備中</span>
+                  <span class="badge">Creative Tool</span>
                 </div>
-            </div>
-        </div>
-
-        <div class="app-card">
-            <div class="app-color" style="background: #42A5F5;"></div>
-            <div class="app-info">
-                <h2>スナップレシートAI</h2>
-                <p class="app-desc">レシートをカメラで撮るだけでAIが自動仕分け。確定申告対応の経費レポートを即生成</p>
-                <div class="app-links">
-                    <a href="https://marumi-works.com/snap-receipt-ai/privacy" style="color: #42A5F5;">プライバシーポリシー</a>
-                    <a href="https://marumi-works.com/snap-receipt-ai/terms" style="color: #42A5F5;">利用規約</a>
-                    <a href="https://marumi-works.com/snap-receipt-ai/support" style="color: #42A5F5;">サポート</a>
+                <h3>Eazel</h3>
+                <p>制作や編集の作業を補助する個人開発アプリとして、紹介ページの整備を予定しています。</p>
+                <div class="app-card__links">
+                  <a class="text-link" href="apps/eazel/">紹介ページ</a>
                 </div>
-            </div>
+              </div>
+            </article>
+          </div>
+          <div class="section-actions">
+            <a class="button button--primary" href="apps/index.html">アプリ一覧へ</a>
+            <a class="button button--secondary" href="claude-goal/">Claude Goal 配布ページ</a>
+          </div>
         </div>
+      </section>
 
-
-        <div class="app-card">
-            <div class="app-color" style="background: #0097A7;"></div>
-            <div class="app-info">
-                <h2>トリップポケット</h2>
-                <p class="app-desc">トリップポケットは、旅行前の準備と旅行中の確認に必要な情報だけを、ひとつにまとめて持ち歩ける軽量トラベルしおりアプリです。</p>
-                <div class="app-links">
-                    <a href="https://marumi-works.com/trip-pocket/privacy" style="color: #0097A7;">プライバシーポリシー</a>
-                    <a href="https://marumi-works.com/trip-pocket/terms" style="color: #0097A7;">利用規約</a>
-                    <a href="https://marumi-works.com/trip-pocket/support" style="color: #0097A7;">サポート</a>
-                </div>
-            </div>
+      <section class="section section--surface" id="contact">
+        <div class="site-container">
+          <div class="section-header">
+            <h2>Contact</h2>
+            <p>
+              アプリ、AI活用、開発相談の受付導線を整備中です。
+              現時点での連絡はメールからお願いします。
+            </p>
+          </div>
+          <div class="link-grid">
+            <article class="link-card">
+              <h3>お問い合わせ</h3>
+              <p><a class="text-link" href="mailto:marumi.works@gmail.com">marumi.works@gmail.com</a></p>
+            </article>
+            <article class="link-card">
+              <h3>アプリ情報</h3>
+              <p>既存アプリのプライバシーポリシー、利用規約、サポートページはアプリ一覧へ整理予定です。</p>
+            </article>
+            <article class="link-card">
+              <h3>配布ページ</h3>
+              <p><a class="text-link" href="claude-goal/">Claude Goal の限定配布ページを見る</a></p>
+            </article>
+          </div>
         </div>
+      </section>
+    </main>
 
-
-        <div class="app-card">
-            <div class="app-color" style="background: #FF7E4F;"></div>
-            <div class="app-info">
-                <h2>ひらがなカメラ</h2>
-                <p class="app-desc">身の回りのものを撮るだけで、ひらがなに楽しく出会える3〜5歳向けの学習アプリ</p>
-                <div class="app-links">
-                    <a href="https://marumi-works.com/hiragana-snap/privacy" style="color: #FF7E4F;">プライバシーポリシー</a>
-                    <a href="https://marumi-works.com/hiragana-snap/terms" style="color: #FF7E4F;">利用規約</a>
-                    <a href="https://marumi-works.com/hiragana-snap/support" style="color: #FF7E4F;">サポート</a>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="app-card">
-            <div class="app-color" style="background: #FF6B9D;"></div>
-            <div class="app-info">
-                <h2>えほんスナップ - おえかき絵本</h2>
-                <p class="app-desc">お子さまの自由なおえかきからAIが絵本を作成。3〜7歳向けのクリエイティブ知育アプリ</p>
-                <div class="app-links">
-                    <a href="https://marumi-works.com/ehon-snap/privacy" style="color: #FF6B9D;">プライバシーポリシー</a>
-                    <a href="https://marumi-works.com/ehon-snap/terms" style="color: #FF6B9D;">利用規約</a>
-                    <a href="https://marumi-works.com/ehon-snap/support" style="color: #FF6B9D;">サポート</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="app-card">
-            <div class="app-color" style="background: #0097A7;"></div>
-            <div class="app-info">
-                <h2>エアキュー</h2>
-                <p class="app-desc">AirCue（エアキュー）は、花粉・空気質（AQI）・暑さを1画面にまとめて、朝の外出判断をすばやくサポートするアプリです。</p>
-                <div class="app-links">
-                    <a href="https://marumi-works.com/air-cue/privacy" style="color: #0097A7;">プライバシーポリシー</a>
-                    <a href="https://marumi-works.com/air-cue/terms" style="color: #0097A7;">利用規約</a>
-                    <a href="https://marumi-works.com/air-cue/support" style="color: #0097A7;">サポート</a>
-                </div>
-            </div>
-        </div>
-
-    <footer>
-        <p>&copy; 2026 marumi works</p>
-        <p>お問い合わせ: <a href="mailto:marumi.works@gmail.com">marumi.works@gmail.com</a></p>
+    <footer class="site-footer">
+      <div class="site-container site-footer__inner">
+        <p class="site-footer__copy">&copy; 2026 Marumi Works</p>
+        <a href="mailto:marumi.works@gmail.com">marumi.works@gmail.com</a>
+      </div>
     </footer>
-</div>
+  </div>
 </body>
 </html>
