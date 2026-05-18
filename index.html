@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Marumi Works は、iOSアプリ、デスクトップアプリ、AI活用ツールを企画・開発する個人開発スタジオです。">
-  <title>Marumi Works | Apps and AI Tools</title>
+  <meta name="description" content="Marumi Works は、iOSアプリ、デスクトップアプリ、AI活用ツールを企画・開発する独立系プロダクトスタジオです。">
+  <title>Marumi Works — Independent product studio for apps and AI tools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/img/hero-architecture.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
@@ -15,12 +19,13 @@
           <span class="site-brand__mark">MW</span>
           <span class="site-brand__text">
             <span class="site-brand__name">Marumi Works</span>
-            <span class="site-brand__tagline">Apps / AI Tools / Workflow</span>
+            <span class="site-brand__tagline">Apps · AI · Workflow</span>
           </span>
         </a>
         <nav class="site-nav" aria-label="Primary navigation">
-          <a href="#apps">Apps</a>
-          <a href="#works">Works</a>
+          <a href="#works">Practice</a>
+          <a href="#apps">Products</a>
+          <a href="apps/">Directory</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
@@ -28,156 +33,226 @@
 
     <main>
       <section class="hero">
-        <div class="site-container hero__grid">
-          <div>
-            <p class="eyebrow">Independent product studio</p>
-            <h1>日々の判断と作業を軽くする、アプリとAIツールをつくる。</h1>
+        <div class="hero__media" aria-hidden="true"></div>
+        <div class="site-container hero__inner">
+          <div class="hero__copy">
+            <p class="eyebrow">Independent product studio · Est. 2024</p>
+            <h1>日々の判断と作業を、<br>少しずつ軽くする道具を。</h1>
             <p class="hero__lead">
-              Marumi Works は、個人開発のスピードを活かして、iOSアプリ、デスクトップツール、
-              AIを使った業務支援プロダクトを企画・開発しています。
+              Marumi Works は、iOSアプリ、デスクトップツール、AI ワークフローを
+              小さく速くつくる独立系スタジオです。生活と業務の摩擦を 1 つずつ削るための
+              ソフトウェアを、企画から運用まで一貫して設計しています。
             </p>
             <div class="hero__actions">
-              <a class="button button--primary" href="#apps">注目アプリを見る</a>
-              <a class="button button--secondary" href="mailto:marumi.works@gmail.com">相談する</a>
+              <a class="button button--primary" href="#apps">
+                Featured products
+                <span class="button__arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="button button--secondary" href="mailto:marumi.works@gmail.com">
+                Start a conversation
+              </a>
             </div>
           </div>
 
-          <aside class="hero-panel" aria-label="Marumi Works の開発領域">
-            <div class="hero-panel__top">
-              <p class="hero-panel__title">Current focus</p>
-              <span class="hero-panel__status">Preparing services</span>
+          <aside class="hero__meta" aria-label="Studio summary">
+            <div class="hero-meta-row">
+              <span class="hero-meta-row__label">Location</span>
+              <span class="hero-meta-row__value">Tokyo, Japan<small>Remote-friendly worldwide</small></span>
             </div>
-            <ul class="hero-panel__list">
-              <li>
-                <span class="hero-panel__label">iOS Apps</span>
-                <span class="hero-panel__meta">Life / Learning / Utility</span>
-              </li>
-              <li>
-                <span class="hero-panel__label">Desktop Tools</span>
-                <span class="hero-panel__meta">Productivity / Automation</span>
-              </li>
-              <li>
-                <span class="hero-panel__label">AI Workflow</span>
-                <span class="hero-panel__meta">Prototype / Operations</span>
-              </li>
-            </ul>
+            <div class="hero-meta-row">
+              <span class="hero-meta-row__label">Focus</span>
+              <span class="hero-meta-row__value">Apps / AI Tools / Workflow<small>iOS · Desktop · Operations</small></span>
+            </div>
+            <div class="hero-meta-row">
+              <span class="hero-meta-row__label">Status</span>
+              <span class="hero-meta-row__value"><span class="dot"></span>&nbsp;Open for new collaborations</span>
+            </div>
           </aside>
         </div>
       </section>
 
       <section class="section section--surface" id="works">
         <div class="site-container">
-          <div class="section-header">
-            <h2>小さく試し、使える形まで磨く。</h2>
-            <p>
-              生活の中で何度も使うアプリから、AIを前提にした開発・業務支援まで、
-              企画、実装、配布ページ、運用導線を一体で整えていきます。
-            </p>
-          </div>
+          <header class="section-header">
+            <div class="section-header__index">
+              <strong>01</strong>
+              <span>Practice / 取り組み</span>
+            </div>
+            <div class="section-header__title">
+              <p class="section-tagline">What we build</p>
+              <h2>小さく試し、使われる形まで磨く。</h2>
+              <p>
+                生活の中で繰り返し使うアプリから、AI を前提にした業務支援まで。
+                企画、実装、配布、運用導線をひとつのスタジオの中で組み立てています。
+              </p>
+            </div>
+          </header>
+
           <div class="area-grid">
             <article class="area-card">
+              <span class="area-card__index">01 / iOS</span>
               <h3>iOSアプリ開発</h3>
-              <p>記録、学習、生活支援など、毎日使える小さなユーティリティを継続的に開発しています。</p>
+              <p>記録・学習・生活支援など、毎日使える小さなユーティリティを継続的に公開しています。</p>
             </article>
             <article class="area-card">
-              <h3>デスクトップアプリ</h3>
-              <p>PC作業の流れを止めないための、軽量で実用的なツールづくりに取り組んでいます。</p>
+              <span class="area-card__index">02 / Desktop</span>
+              <h3>デスクトップツール</h3>
+              <p>PC 作業の流れを止めない、軽量かつ実用的なツールづくりに取り組んでいます。</p>
             </article>
             <article class="area-card">
-              <h3>AIツール開発</h3>
-              <p>生成AIを活用した試作、文章・画像・業務フロー支援の仕組み化を進めています。</p>
+              <span class="area-card__index">03 / AI</span>
+              <h3>AI ワークフロー</h3>
+              <p>生成 AI を活用した試作と、文章・画像・業務フロー支援の仕組み化を進めています。</p>
             </article>
             <article class="area-card">
-              <h3>業務受付準備</h3>
-              <p>将来的な受託相談に向けて、実績、提供範囲、問い合わせ導線を整備しています。</p>
+              <span class="area-card__index">04 / Studio</span>
+              <h3>受託対応の準備</h3>
+              <p>将来の受託相談に向けて、実績・提供範囲・問い合わせ導線を整備しています。</p>
             </article>
+          </div>
+
+          <div class="figure-strip">
+            <div class="figure-strip__item">
+              <span class="figure-strip__value">14</span>
+              <span class="figure-strip__label">Published apps</span>
+            </div>
+            <div class="figure-strip__item">
+              <span class="figure-strip__value">3</span>
+              <span class="figure-strip__label">In active development</span>
+            </div>
+            <div class="figure-strip__item">
+              <span class="figure-strip__value figure-strip__value--text">iOS · Desktop · AI</span>
+              <span class="figure-strip__label">Platforms covered</span>
+            </div>
+            <div class="figure-strip__item">
+              <span class="figure-strip__value">2024<span class="figure-strip__suffix"> —</span></span>
+              <span class="figure-strip__label">Studio established</span>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section" id="apps">
         <div class="site-container">
-          <div class="section-header">
-            <h2>Featured Apps</h2>
-            <p>
-              先行して紹介ページを整備していく予定のプロダクトです。
-              販売ページや専用サイトは、準備ができたものから順次接続します。
-            </p>
-          </div>
+          <header class="section-header">
+            <div class="section-header__index">
+              <strong>02</strong>
+              <span>Products / プロダクト</span>
+            </div>
+            <div class="section-header__title">
+              <p class="section-tagline">Featured</p>
+              <h2>先行して紹介ページを整えるプロダクト。</h2>
+              <p>
+                販売ページや専用サイトは準備ができたものから順次接続します。
+                既存アプリの法務・サポート情報は <a class="text-link" href="apps/" style="display:inline;">Directory</a> にまとめています。
+              </p>
+            </div>
+          </header>
+
           <div class="app-grid">
             <article class="app-card">
-              <div class="app-card__accent"></div>
+              <div class="app-card__media">
+                <img src="assets/img/section-paper.png" alt="" loading="lazy">
+              </div>
               <div class="app-card__body">
                 <div class="app-card__meta">
-                  <span class="badge badge--soon">準備中</span>
-                  <span class="badge">iOS App</span>
+                  <span class="badge badge--soon">Coming soon</span>
+                  <span class="badge">iOS app</span>
                 </div>
+                <span class="app-card__caption">PRODUCT · 01</span>
                 <h3>PulseEat</h3>
-                <p>食事や体調の記録をもとに、日々のコンディション管理を支えるアプリとして準備中です。</p>
+                <p>食事と体調の記録をもとに、日々のコンディションを観察するための iOS アプリ。</p>
                 <div class="app-card__links">
-                  <a class="text-link" href="apps/pulseeat/">紹介ページ</a>
+                  <a class="text-link" href="apps/pulseeat/">Overview</a>
+                  <span class="text-link text-link--muted">Sales</span>
                 </div>
               </div>
             </article>
 
             <article class="app-card">
-              <div class="app-card__accent app-card__accent--coral"></div>
+              <div class="app-card__media">
+                <img src="assets/img/works-blocks.png" alt="" loading="lazy">
+              </div>
               <div class="app-card__body">
                 <div class="app-card__meta">
-                  <span class="badge badge--live">配布ページあり</span>
-                  <span class="badge">Desktop Tool</span>
+                  <span class="badge badge--live">In distribution</span>
+                  <span class="badge">Desktop tool</span>
                 </div>
+                <span class="app-card__caption">PRODUCT · 02</span>
                 <h3>Claude Goal</h3>
-                <p>長時間タスクをゴール単位で進めるための、開発・検証支援ツールです。</p>
+                <p>長時間タスクをゴール単位で進める、Mac / Windows 向け開発・検証支援ツール。</p>
                 <div class="app-card__links">
-                  <a class="text-link" href="apps/claude-goal/">紹介ページ</a>
+                  <a class="text-link" href="apps/claude-goal/">Overview</a>
+                  <a class="text-link" href="claude-goal/">Distribution</a>
                 </div>
               </div>
             </article>
 
             <article class="app-card">
-              <div class="app-card__accent app-card__accent--blue"></div>
+              <div class="app-card__media">
+                <img src="assets/img/contact-desk.png" alt="" loading="lazy">
+              </div>
               <div class="app-card__body">
                 <div class="app-card__meta">
-                  <span class="badge badge--soon">準備中</span>
-                  <span class="badge">Creative Tool</span>
+                  <span class="badge badge--soon">Coming soon</span>
+                  <span class="badge">Creative tool</span>
                 </div>
+                <span class="app-card__caption">PRODUCT · 03</span>
                 <h3>Eazel</h3>
-                <p>制作や編集の作業を補助する個人開発アプリとして、紹介ページの整備を予定しています。</p>
+                <p>制作・編集まわりの細かな手戻りを減らすための、個人開発アプリ。</p>
                 <div class="app-card__links">
-                  <a class="text-link" href="apps/eazel/">紹介ページ</a>
+                  <a class="text-link" href="apps/eazel/">Overview</a>
+                  <span class="text-link text-link--muted">Sales</span>
                 </div>
               </div>
             </article>
           </div>
+
           <div class="section-actions">
-            <a class="button button--primary" href="apps/index.html">アプリ一覧へ</a>
-            <a class="button button--secondary" href="claude-goal/">Claude Goal 配布ページ</a>
+            <a class="button button--primary" href="apps/">
+              View full directory
+              <span class="button__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="button button--secondary" href="claude-goal/">Claude Goal distribution</a>
           </div>
         </div>
       </section>
 
       <section class="section section--surface" id="contact">
         <div class="site-container">
-          <div class="section-header">
-            <h2>Contact</h2>
-            <p>
-              アプリ、AI活用、開発相談の受付導線を整備中です。
-              現時点での連絡はメールからお願いします。
-            </p>
-          </div>
+          <header class="section-header">
+            <div class="section-header__index">
+              <strong>03</strong>
+              <span>Contact / 連絡</span>
+            </div>
+            <div class="section-header__title">
+              <p class="section-tagline">Get in touch</p>
+              <h2>受託・取材・協業のご相談を受け付けています。</h2>
+              <p>
+                プロダクトの紹介ページ、販売ページ、サポート導線は順次整備中です。
+                現時点での連絡はメールから、可能な限り 2 営業日以内に返信します。
+              </p>
+            </div>
+          </header>
+
           <div class="link-grid">
             <article class="link-card">
+              <span class="link-card__index">01 / Email</span>
               <h3>お問い合わせ</h3>
-              <p><a class="text-link" href="mailto:marumi.works@gmail.com">marumi.works@gmail.com</a></p>
+              <p>受託・取材・協業のご相談は、メールで概要をお送りください。</p>
+              <a class="text-link" href="mailto:marumi.works@gmail.com">marumi.works@gmail.com</a>
             </article>
             <article class="link-card">
+              <span class="link-card__index">02 / Legal</span>
               <h3>アプリ情報</h3>
-              <p>既存アプリのプライバシーポリシー、利用規約、サポートページはアプリ一覧へ整理予定です。</p>
+              <p>既存アプリのプライバシーポリシー、利用規約、サポートは Directory に整理しています。</p>
+              <a class="text-link" href="apps/">App directory</a>
             </article>
             <article class="link-card">
+              <span class="link-card__index">03 / Distribution</span>
               <h3>配布ページ</h3>
-              <p><a class="text-link" href="claude-goal/">Claude Goal の限定配布ページを見る</a></p>
+              <p>Claude Goal の限定配布ページは、パスワード付きで公開中です。</p>
+              <a class="text-link" href="claude-goal/">Claude Goal private page</a>
             </article>
           </div>
         </div>
@@ -185,9 +260,48 @@
     </main>
 
     <footer class="site-footer">
-      <div class="site-container site-footer__inner">
-        <p class="site-footer__copy">&copy; 2026 Marumi Works</p>
-        <a href="mailto:marumi.works@gmail.com">marumi.works@gmail.com</a>
+      <div class="site-container">
+        <div class="site-footer__top">
+          <div class="site-footer__brand">
+            <a class="site-footer__brand-mark" href="./">
+              <span class="site-brand__mark">MW</span>
+              <span class="site-brand__text">
+                <span class="site-brand__name">Marumi Works</span>
+                <span class="site-brand__tagline">Apps · AI · Workflow</span>
+              </span>
+            </a>
+            <p>独立系プロダクトスタジオとして、iOS・デスクトップ・AI のソフトウェアを企画から運用まで一貫してつくっています。</p>
+          </div>
+          <div class="site-footer__cols">
+            <div class="site-footer__col">
+              <h4>Studio</h4>
+              <ul>
+                <li><a href="#works">Practice</a></li>
+                <li><a href="#apps">Products</a></li>
+                <li><a href="apps/">Directory</a></li>
+              </ul>
+            </div>
+            <div class="site-footer__col">
+              <h4>Products</h4>
+              <ul>
+                <li><a href="apps/claude-goal/">Claude Goal</a></li>
+                <li><a href="apps/pulseeat/">PulseEat</a></li>
+                <li><a href="apps/eazel/">Eazel</a></li>
+              </ul>
+            </div>
+            <div class="site-footer__col">
+              <h4>Contact</h4>
+              <ul>
+                <li><a href="mailto:marumi.works@gmail.com">marumi.works@gmail.com</a></li>
+                <li><a href="claude-goal/">Claude Goal distribution</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <span>© 2026 Marumi Works · Independent product studio</span>
+          <span>Tokyo, Japan</span>
+        </div>
       </div>
     </footer>
   </div>

@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="PulseEat は、食事や体調の記録を通じて日々のコンディション管理を支えることを目指して準備中の Marumi Works の iOS アプリです。">
-  <title>PulseEat | Marumi Works</title>
+  <title>PulseEat — Marumi Works</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="../../assets/css/site.css">
 </head>
 <body>
@@ -15,20 +18,20 @@
           <span class="site-brand__mark">MW</span>
           <span class="site-brand__text">
             <span class="site-brand__name">Marumi Works</span>
-            <span class="site-brand__tagline">Apps / AI Tools / Workflow</span>
+            <span class="site-brand__tagline">Apps · AI · Workflow</span>
           </span>
         </a>
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="../../">Home</a>
-          <a href="../">Apps</a>
-          <a href="../../#works">Works</a>
+          <a href="../">Directory</a>
+          <a href="../../#works">Practice</a>
           <a href="mailto:marumi.works@gmail.com">Contact</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="page-hero">
+      <section class="page-hero page-hero--accent">
         <div class="site-container">
           <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="../../">Home</a>
@@ -37,15 +40,18 @@
             <span>/</span>
             <span>PulseEat</span>
           </nav>
-          <p class="eyebrow">iOS app preview</p>
+          <p class="eyebrow">Product · 01 · iOS app preview</p>
           <h1>PulseEat</h1>
           <p class="page-hero__lead">
-            食事や体調の記録を通じて、日々のコンディション管理を支えることを目指して準備中のアプリです。
+            食事と体調を記録し、日々のコンディションを淡々と観察するための iOS アプリ。
             販売ページや詳細な機能紹介は、公開準備が整い次第追加します。
           </p>
           <div class="hero__actions">
-            <a class="button button--primary" href="../">アプリ一覧へ戻る</a>
-            <a class="button button--secondary" href="mailto:marumi.works@gmail.com">問い合わせる</a>
+            <a class="button button--primary" href="../">
+              View directory
+              <span class="button__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="button button--secondary" href="mailto:marumi.works@gmail.com">Contact studio</a>
           </div>
         </div>
       </section>
@@ -56,12 +62,12 @@
             <h2>食事と体調の変化を、あとから見返せる形へ。</h2>
             <p>
               PulseEat は、毎日の食事や身体の感覚を記録し、生活のリズムを振り返るための iOS アプリとして整備しています。
-              現時点では公開前の紹介ページとして、正式な機能名や販売情報は確定後に更新します。
+              現時点では公開前の紹介ページとして掲載しており、正式な機能名や販売情報は確定後に更新します。
             </p>
 
             <h3>想定している領域</h3>
             <p>
-              食事ログ、体調メモ、振り返りのしやすさを軸に、無理なく継続できる記録体験を検討しています。
+              食事ログ、体調メモ、振り返りのしやすさを軸に、無理なく続けられる記録体験を検討しています。
               医療的な判断や診断を代替するものではなく、日々のセルフチェックを補助するアプリとして扱います。
             </p>
 
@@ -77,19 +83,19 @@
             <ul class="status-list">
               <li>
                 <strong>Category</strong>
-                <span>iOS App</span>
+                <span>iOS app</span>
               </li>
               <li>
-                <strong>Status</strong>
-                <span>準備中</span>
+                <strong>Stage</strong>
+                <span>Preview</span>
               </li>
               <li>
                 <strong>Sales page</strong>
-                <span>未定</span>
+                <span>—</span>
               </li>
               <li>
                 <strong>Legal pages</strong>
-                <span>準備中</span>
+                <span>In progress</span>
               </li>
             </ul>
             <div class="detail-side__links">
@@ -102,9 +108,48 @@
     </main>
 
     <footer class="site-footer">
-      <div class="site-container site-footer__inner">
-        <p class="site-footer__copy">&copy; 2026 Marumi Works</p>
-        <a href="mailto:marumi.works@gmail.com">marumi.works@gmail.com</a>
+      <div class="site-container">
+        <div class="site-footer__top">
+          <div class="site-footer__brand">
+            <a class="site-footer__brand-mark" href="../../">
+              <span class="site-brand__mark">MW</span>
+              <span class="site-brand__text">
+                <span class="site-brand__name">Marumi Works</span>
+                <span class="site-brand__tagline">Apps · AI · Workflow</span>
+              </span>
+            </a>
+            <p>独立系プロダクトスタジオとして、iOS・デスクトップ・AI のソフトウェアを企画から運用まで一貫してつくっています。</p>
+          </div>
+          <div class="site-footer__cols">
+            <div class="site-footer__col">
+              <h4>Studio</h4>
+              <ul>
+                <li><a href="../../#works">Practice</a></li>
+                <li><a href="../../#apps">Products</a></li>
+                <li><a href="../">Directory</a></li>
+              </ul>
+            </div>
+            <div class="site-footer__col">
+              <h4>Products</h4>
+              <ul>
+                <li><a href="../claude-goal/">Claude Goal</a></li>
+                <li><a href="./">PulseEat</a></li>
+                <li><a href="../eazel/">Eazel</a></li>
+              </ul>
+            </div>
+            <div class="site-footer__col">
+              <h4>Contact</h4>
+              <ul>
+                <li><a href="mailto:marumi.works@gmail.com">marumi.works@gmail.com</a></li>
+                <li><a href="../../claude-goal/">Claude Goal distribution</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <span>© 2026 Marumi Works · Independent product studio</span>
+          <span>Tokyo, Japan</span>
+        </div>
       </div>
     </footer>
   </div>

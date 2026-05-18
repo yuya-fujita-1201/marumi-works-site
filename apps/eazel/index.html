@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Eazel は、制作や編集の作業を補助する Marumi Works の個人開発アプリとして準備中のクリエイティブツールです。">
-  <title>Eazel | Marumi Works</title>
+  <title>Eazel — Marumi Works</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="../../assets/css/site.css">
 </head>
 <body>
@@ -15,20 +18,20 @@
           <span class="site-brand__mark">MW</span>
           <span class="site-brand__text">
             <span class="site-brand__name">Marumi Works</span>
-            <span class="site-brand__tagline">Apps / AI Tools / Workflow</span>
+            <span class="site-brand__tagline">Apps · AI · Workflow</span>
           </span>
         </a>
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="../../">Home</a>
-          <a href="../">Apps</a>
-          <a href="../../#works">Works</a>
+          <a href="../">Directory</a>
+          <a href="../../#works">Practice</a>
           <a href="mailto:marumi.works@gmail.com">Contact</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="page-hero">
+      <section class="page-hero page-hero--accent">
         <div class="site-container">
           <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="../../">Home</a>
@@ -37,15 +40,18 @@
             <span>/</span>
             <span>Eazel</span>
           </nav>
-          <p class="eyebrow">Creative tool preview</p>
+          <p class="eyebrow">Product · 03 · Creative tool preview</p>
           <h1>Eazel</h1>
           <p class="page-hero__lead">
-            制作や編集の作業を補助する個人開発アプリとして、公開に向けた紹介ページを準備しています。
+            制作・編集まわりの細かな手戻りを減らすための個人開発アプリ。
             具体的な機能、販売ページ、サポート導線は確定後に追加します。
           </p>
           <div class="hero__actions">
-            <a class="button button--primary" href="../">アプリ一覧へ戻る</a>
-            <a class="button button--secondary" href="mailto:marumi.works@gmail.com">問い合わせる</a>
+            <a class="button button--primary" href="../">
+              View directory
+              <span class="button__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="button button--secondary" href="mailto:marumi.works@gmail.com">Contact studio</a>
           </div>
         </div>
       </section>
@@ -56,7 +62,7 @@
             <h2>制作の手元に置ける、軽い作業補助ツールとして整備中。</h2>
             <p>
               Eazel は、制作や編集に関わる日々の作業を補助するクリエイティブツールとして準備中です。
-              現時点では公開前の紹介ページとして、正式な機能名や対応プラットフォームは確定後に更新します。
+              現時点では公開前の紹介ページとして掲載しており、正式な機能名や対応プラットフォームは確定後に更新します。
             </p>
 
             <h3>想定している領域</h3>
@@ -77,19 +83,19 @@
             <ul class="status-list">
               <li>
                 <strong>Category</strong>
-                <span>Creative Tool</span>
+                <span>Creative tool</span>
               </li>
               <li>
-                <strong>Status</strong>
-                <span>準備中</span>
+                <strong>Stage</strong>
+                <span>Preview</span>
               </li>
               <li>
                 <strong>Platforms</strong>
-                <span>未定</span>
+                <span>—</span>
               </li>
               <li>
                 <strong>Sales page</strong>
-                <span>未定</span>
+                <span>—</span>
               </li>
             </ul>
             <div class="detail-side__links">
@@ -102,9 +108,48 @@
     </main>
 
     <footer class="site-footer">
-      <div class="site-container site-footer__inner">
-        <p class="site-footer__copy">&copy; 2026 Marumi Works</p>
-        <a href="mailto:marumi.works@gmail.com">marumi.works@gmail.com</a>
+      <div class="site-container">
+        <div class="site-footer__top">
+          <div class="site-footer__brand">
+            <a class="site-footer__brand-mark" href="../../">
+              <span class="site-brand__mark">MW</span>
+              <span class="site-brand__text">
+                <span class="site-brand__name">Marumi Works</span>
+                <span class="site-brand__tagline">Apps · AI · Workflow</span>
+              </span>
+            </a>
+            <p>独立系プロダクトスタジオとして、iOS・デスクトップ・AI のソフトウェアを企画から運用まで一貫してつくっています。</p>
+          </div>
+          <div class="site-footer__cols">
+            <div class="site-footer__col">
+              <h4>Studio</h4>
+              <ul>
+                <li><a href="../../#works">Practice</a></li>
+                <li><a href="../../#apps">Products</a></li>
+                <li><a href="../">Directory</a></li>
+              </ul>
+            </div>
+            <div class="site-footer__col">
+              <h4>Products</h4>
+              <ul>
+                <li><a href="../claude-goal/">Claude Goal</a></li>
+                <li><a href="../pulseeat/">PulseEat</a></li>
+                <li><a href="./">Eazel</a></li>
+              </ul>
+            </div>
+            <div class="site-footer__col">
+              <h4>Contact</h4>
+              <ul>
+                <li><a href="mailto:marumi.works@gmail.com">marumi.works@gmail.com</a></li>
+                <li><a href="../../claude-goal/">Claude Goal distribution</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <span>© 2026 Marumi Works · Independent product studio</span>
+          <span>Tokyo, Japan</span>
+        </div>
       </div>
     </footer>
   </div>
